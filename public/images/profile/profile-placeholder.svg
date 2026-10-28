@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Profile image placeholder">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a2e"/>
+      <stop offset="1" stop-color="#0a1020"/>
+    </linearGradient>
+    <radialGradient id="pglow" cx="0.5" cy="0.28" r="0.7">
+      <stop offset="0" stop-color="#6d8cff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#6d8cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pshape" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6d8cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.35"/>
+    </linearGradient>
+    <pattern id="pgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#pbg)"/>
+  <rect width="800" height="1000" fill="url(#pgrid)"/>
+  <rect width="800" height="1000" fill="url(#pglow)"/>
+  <circle cx="400" cy="382" r="126" fill="url(#pshape)"/>
+  <path d="M400 540c-150 0-272 96-288 224h576c-16-128-138-224-288-224z" fill="url(#pshape)"/>
+  <text x="400" y="424" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="128" font-weight="800" fill="rgba(255,255,255,0.72)">S</text>
+  <text x="400" y="892" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="600" fill="rgba(255,255,255,0.6)">Profile photo placeholder</text>
+  <text x="400" y="934" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" fill="rgba(255,255,255,0.36)">Replace with images/profile/…</text>
+</svg>

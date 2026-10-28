@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Inventory Dashboard placeholder screenshot">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(238 34% 8%)"/>
+      <stop offset="1" stop-color="hsl(256 30% 13%)"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.18" cy="0.05" r="0.75">
+      <stop offset="0" stop-color="hsl(250 84% 68%)" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="hsl(250 84% 68%)" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1600" height="64" fill="rgba(255,255,255,0.045)"/>
+  <circle cx="40" cy="32" r="7" fill="rgba(255,255,255,0.22)"/>
+  <circle cx="68" cy="32" r="7" fill="rgba(255,255,255,0.16)"/>
+  <circle cx="96" cy="32" r="7" fill="rgba(255,255,255,0.12)"/>
+  <rect x="132" y="19" width="440" height="26" rx="13" fill="rgba(255,255,255,0.07)"/>
+
+            <rect x="40" y="104" width="248" height="856" rx="18" fill="rgba(255,255,255,0.035)"/>
+            <rect x="72" y="140" width="104" height="12" rx="6" fill="rgba(255,255,255,0.22)"/>
+            <rect x="72" y="196" width="180" height="10" rx="5" fill="rgba(255,255,255,0.1)"/>
+            <rect x="72" y="228" width="150" height="10" rx="5" fill="rgba(255,255,255,0.1)"/>
+            <rect x="72" y="260" width="168" height="10" rx="5" fill="rgba(255,255,255,0.1)"/>
+            <rect x="324" y="140" width="300" height="20" rx="10" fill="rgba(255,255,255,0.24)"/>
+            <rect x="1132" y="130" width="168" height="40" rx="20" fill="hsl(250 84% 68%)" opacity="0.85"/>
+            <rect x="324" y="196" width="976" height="52" rx="12" fill="rgba(255,255,255,0.06)"/>
+            <rect x="324" y="268" width="976" height="62" rx="12" fill="hsl(250 84% 68% / 0.16)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="288" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="288" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="288" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="284" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="346" width="976" height="62" rx="12" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="366" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="366" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="366" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="362" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="424" width="976" height="62" rx="12" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="444" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="444" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="444" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="440" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="502" width="976" height="62" rx="12" fill="hsl(250 84% 68% / 0.16)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="522" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="522" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="522" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="518" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="580" width="976" height="62" rx="12" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="600" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="600" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="600" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="596" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="658" width="976" height="62" rx="12" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="678" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="678" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="678" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="674" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="736" width="976" height="62" rx="12" fill="hsl(250 84% 68% / 0.16)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="756" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="756" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="756" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="752" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/><rect x="324" y="814" width="976" height="62" rx="12" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.06)"/><rect x="356" y="834" width="150" height="10" rx="5" fill="rgba(255,255,255,0.24)"/><rect x="560" y="834" width="200" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="820" y="834" width="120" height="10" rx="5" fill="rgba(255,255,255,0.13)"/><rect x="1100" y="830" width="150" height="18" rx="9" fill="hsl(250 84% 68%)" opacity="0.4"/>
+  <rect x="324" y="900" width="700" height="0" fill="none"/>
+  <g font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+    <rect x="40" y="40" width="0" height="0" fill="none"/>
+    <text x="1320" y="955" text-anchor="end" font-size="26" font-weight="600" fill="rgba(255,255,255,0.34)">Stock movements</text>
+    <text x="1348" y="40" text-anchor="end" font-size="24" font-weight="700" fill="rgba(255,255,255,0.55)" opacity="0">Stock movements</text>
+  </g>
+  <g>
+    <rect x="1240" y="18" width="330" height="30" rx="15" fill="rgba(255,255,255,0.09)"/>
+    <text x="1405" y="39" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="600" fill="rgba(255,255,255,0.62)">Placeholder screenshot</text>
+  </g>
+</svg>
