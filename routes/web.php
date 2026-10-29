@@ -75,6 +75,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     Route::get('messages', [\App\Http\Controllers\Admin\ContactMessageController::class, 'index'])->name('messages.index');
     Route::get('messages/{message}', [\App\Http\Controllers\Admin\ContactMessageController::class, 'show'])->name('messages.show');
+    Route::post('messages/{message}/reply', [\App\Http\Controllers\Admin\ContactMessageController::class,'reply',])->name('messages.reply');
     Route::post('messages/{message}/read', [\App\Http\Controllers\Admin\ContactMessageController::class, 'markRead'])->name('messages.read');
     Route::post('messages/{message}/unread', [\App\Http\Controllers\Admin\ContactMessageController::class, 'markUnread'])->name('messages.unread');
     Route::patch('messages/{message}/status', [\App\Http\Controllers\Admin\ContactMessageController::class, 'updateStatus'])->name('messages.status');

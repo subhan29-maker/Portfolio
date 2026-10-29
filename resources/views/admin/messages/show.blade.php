@@ -62,6 +62,42 @@
                 </div>
                 <hr style="border:none;border-top:1px solid var(--border);margin:1.5rem 0;">
                 <div style="white-space:pre-line;line-height:1.7;">{{ $message->message }}</div>
+
+                <hr style="border:none;border-top:1px solid var(--border);margin:1.5rem 0;">
+
+<div>
+    <h2 class="admin-card__title">Reply to {{ $message->name }}</h2>
+    <p class="admin-card__meta">
+        Your reply will be sent to {{ $message->email }}.
+    </p>
+
+    @error('reply')
+        <p role="alert">{{ $message }}</p>
+    @enderror
+
+    @if (session('status'))
+        <p role="status">{{ session('status') }}</p>
+    @endif
+
+    <form method="POST" action="{{ route('admin.messages.reply', $message) }}">
+        @csrf
+
+        <div class="admin-field">
+            <label class="admin-field__label" for="reply">Your reply</label>
+            <textarea
+                class="admin-input"
+                id="reply"
+                name="reply"
+                rows="7"
+                required
+                maxlength="10000"
+                placeholder="Write your reply here..."
+            >{{ old('reply') }}</textarea>
+        </div>
+
+        <button class="btn btn--primary" type="submit">Send reply</button>
+    </form>
+</div>
             </div>
         </div>
     </section>

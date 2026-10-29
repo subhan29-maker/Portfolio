@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactMessage;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -68,6 +69,40 @@ class ContactMessageController extends Controller
 
         return back()->with('status', 'Status updated.');
     }
+
+    public function reply(Request $request, ContactMessage $message): RedirectResponse
+{
+    $data = $request->validate([
+        'reply' => ['required', 'string', 'max:10000'],
+    ]);
+
+    // Log/array mailer email deliver nahi karta.
+    if (in_array(config('mail.default'), ['log', 'array'], true)) {
+        return back()->withInput()->withErrors([
+            'reply' => 'Email sending is not configured. Please configure SMTP first.',
+        ]);
+    }
+
+    try {
+        Mail::raw($data['reply'], function ($mail) use ($message) {
+            $mail->to($message->email)
+                ->subject('Re: ' . $message->subject);
+        });
+    } catch (\Throwable $exception) {
+        report($exception);
+
+        return back()->withInput()->withErrors([
+            'reply' => 'Email could not be sent. Please check your SMTP configuration.',
+        ]);
+    }
+
+    $message->forceFill([
+        'read_at' => $message->read_at ?? now(),
+        'status' => 'replied',
+    ])->save();
+
+    return back()->with('status', 'Reply email sent successfully.');
+}
 
     public function destroy(ContactMessage $message): RedirectResponse
     {
