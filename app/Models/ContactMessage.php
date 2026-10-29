@@ -23,6 +23,8 @@ class ContactMessage extends Model
         'ip_address',
         'user_agent',
         'notified_owner',
+        'read_at',
+        'status',
     ];
 
     /**
@@ -33,6 +35,12 @@ class ContactMessage extends Model
         return [
             'budget' => BudgetRange::class,
             'notified_owner' => 'boolean',
+            'read_at' => 'datetime',
         ];
+    }
+
+    public function isRead(): bool
+    {
+        return ! is_null($this->read_at);
     }
 }

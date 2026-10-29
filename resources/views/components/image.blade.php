@@ -34,6 +34,10 @@
             return asset($path);
         }
 
+        if ($path !== '' && file_exists(public_path('storage/'.$path))) {
+            return asset('storage/'.$path);
+        }
+
         return asset($default);
     };
 

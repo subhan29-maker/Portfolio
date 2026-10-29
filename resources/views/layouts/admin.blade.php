@@ -34,6 +34,16 @@
 
                 <span class="admin-nav__label">Portfolio</span>
 
+                <x-admin.nav-link :href="route('admin.messages.index')" icon="mail" :active="request()->routeIs('admin.messages.*')">
+                    Messages
+                    @php
+                        $navUnread = \App\Models\ContactMessage::query()->whereNull('read_at')->count();
+                    @endphp
+                    @if ($navUnread > 0)
+                        <span class="badge badge--warning">{{ $navUnread }}</span>
+                    @endif
+                </x-admin.nav-link>
+
                 <x-admin.nav-link :href="route('admin.projects.index')" icon="briefcase" :active="request()->routeIs('admin.projects.*')">
                     Projects
                 </x-admin.nav-link>

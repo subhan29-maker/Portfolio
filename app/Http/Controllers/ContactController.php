@@ -27,6 +27,8 @@ class ContactController extends Controller
             ...$request->safe()->only(['name', 'email', 'phone', 'subject', 'budget', 'message']),
             'ip_address' => $request->ip(),
             'user_agent' => Str::limit((string) $request->userAgent(), 255, ''),
+            'status' => 'new',
+            'read_at' => null,
         ]);
 
         $notified = $this->notifyOwner($message);
@@ -49,6 +51,10 @@ class ContactController extends Controller
     private function notifyOwner(ContactMessage $message): bool
     {
         $recipient = config('portfolio.contact.notify_email');
+
+        if (blank($recipient)) {
+            $recipient = env('CONTACT_NOTIFICATION_EMAIL');
+        }
 
         if (blank($recipient)) {
             return false;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactMessage;
 use App\Models\Project;
 use Illuminate\View\View;
 
@@ -26,6 +27,8 @@ class DashboardController extends Controller
             'counts' => $counts,
             'recentlyAdded' => Project::query()->latest()->take(5)->get(),
             'recentlyUpdated' => Project::query()->orderByDesc('updated_at')->take(5)->get(),
+            'unreadMessagesCount' => ContactMessage::query()->whereNull('read_at')->count(),
+            'recentMessages' => ContactMessage::query()->latest()->take(5)->get(),
         ]);
     }
 }

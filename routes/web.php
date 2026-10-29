@@ -73,6 +73,13 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile/picture', [ProfileController::class, 'destroyPicture'])->name('profile.picture.destroy');
 
+    Route::get('messages', [\App\Http\Controllers\Admin\ContactMessageController::class, 'index'])->name('messages.index');
+    Route::get('messages/{message}', [\App\Http\Controllers\Admin\ContactMessageController::class, 'show'])->name('messages.show');
+    Route::post('messages/{message}/read', [\App\Http\Controllers\Admin\ContactMessageController::class, 'markRead'])->name('messages.read');
+    Route::post('messages/{message}/unread', [\App\Http\Controllers\Admin\ContactMessageController::class, 'markUnread'])->name('messages.unread');
+    Route::patch('messages/{message}/status', [\App\Http\Controllers\Admin\ContactMessageController::class, 'updateStatus'])->name('messages.status');
+    Route::delete('messages/{message}', [\App\Http\Controllers\Admin\ContactMessageController::class, 'destroy'])->name('messages.destroy');
+
     Route::get('projects', [AdminProjectController::class, 'index'])->name('projects.index');
     Route::get('projects/create', [AdminProjectController::class, 'create'])->name('projects.create');
     Route::post('projects', [AdminProjectController::class, 'store'])->name('projects.store');

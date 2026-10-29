@@ -65,14 +65,34 @@ class PortfolioSettings
             return null;
         }
 
-        if (! Storage::disk('public')->exists($path)) {
+        $disk = Storage::disk('public');
+        if (! $disk->exists($path)) {
             return null;
         }
 
         $alt = trim((string) Setting::get(self::PROFILE_IMAGE_ALT, ''));
 
+        // Prefer direct public URLs that work even if the storage symlink is broken
+        $relative = ltrim($path, '/');
+        $url = null;
+
+        // Try public/storage first (canonical with symlink)
+        if (file_exists(public_path('storage/'.$relative))) {
+            $url = asset('storage/'.$relative);
+        } elseif (file_exists(public_path($relative))) {
+            // Fallback direct in public/
+            $url = asset($relative);
+        } else {
+            // Fall back to disk URL (no filesystem mutations in accessors)
+            try {
+                $url = url($disk->url($relative));
+            } catch (\Throwable $e) {
+                $url = url('storage/'.$relative);
+            }
+        }
+
         return [
-            'photo' => url(Storage::disk('public')->url(ltrim($path, '/'))),
+            'photo' => $url,
             'photo_alt' => $alt !== ''
                 ? $alt
                 : (string) config('portfolio.profile.photo_alt'),

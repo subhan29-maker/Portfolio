@@ -302,7 +302,7 @@ return [
         // Where owner notifications are sent. Leave empty to keep submissions in
         // the database only. Nothing is ever reported as "emailed" unless this
         // is configured and the message is actually sent.
-        'notify_email' => env('PORTFOLIO_NOTIFY_EMAIL'),
+        'notify_email' => env('CONTACT_NOTIFICATION_EMAIL', env('PORTFOLIO_NOTIFY_EMAIL')),
 
         'currency' => env('PORTFOLIO_CURRENCY', '$'),
 
